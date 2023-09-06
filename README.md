@@ -6,10 +6,10 @@ A React responsive modal component that handles accessibility requirements :
 -	hides background content
 -	focus on whatever field the user wants when it is closed (optional)
 
-Installation
+##Installation
 npm install react-accessible-modal
 
-Usage
+##Usage
 Import the component in a React app:
 import { Modal } from "react-accessible-modal"
  
@@ -93,7 +93,7 @@ export default function MyComponent() {
  
 
 
-Modal props
+##Modal props
 
  *required
 Name	Type	Description
