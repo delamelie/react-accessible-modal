@@ -1,4 +1,4 @@
-#react-accessible-modal-component-library
+<h1>react-accessible-modal-component-library</h1>
 
 A React responsive modal component that handles accessibility requirements :
 -	use of Esc key to close the modal
@@ -6,10 +6,10 @@ A React responsive modal component that handles accessibility requirements :
 -	hides background content
 -	focus on whatever field the user wants when it is closed (optional)
 
-##Installation
+<h2>Installation</h2>
 npm install react-accessible-modal
 
-##Usage
+<h2>Usage</h2>
 Import the component in a React app:
 import { Modal } from "react-accessible-modal"
  
@@ -93,7 +93,7 @@ export default function MyComponent() {
  
 
 
-##Modal props
+<h2>Modal props</h2>
 
  *required
 Name	Type	Description
