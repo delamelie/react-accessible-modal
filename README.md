@@ -1,4 +1,4 @@
-react-accessible-modal-component-library
+#react-accessible-modal-component-library
 
 A React responsive modal component that handles accessibility requirements :
 -	use of Esc key to close the modal
