@@ -1,21 +1,4 @@
-export * from "./lib/Modal";
+import * as React from "react";
+import ReactDOM from "react-dom";
 
-// import React from "react";
-// import ReactDOM from "react-dom";
-
-// ReactDOM.render(
-//   <div>test modal component</div>,
-//   document.getElementById("root")
-// );
-
-// import React from "react";
-// import ReactDOM from "react-dom/client";
-// import "./lib/modal.css";
-// import MyComponent from "./lib/test";
-
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(
-//   <React.StrictMode>
-//     <MyComponent />
-//   </React.StrictMode>
-// );
+ReactDOM.render(<div></div>, document.getElementById("root"));
