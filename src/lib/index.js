@@ -1,1 +1,5 @@
-export * from "./Modal.jsx";
+// export * from "./Modal.jsx";
+
+import Modal from "./lib/Modal";
+
+export { Modal };

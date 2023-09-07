@@ -10,16 +10,22 @@ import "./modal.css";
  * @param {String} buttonText - to help users of assistive technologies with the use of the button
  * @param {String} ariaLabel - text on the button
  * @param {Function} closeModal - function to close the modal
+ * @param {String} buttonStyle - custom style for the button element
+ * @param {String} iconStyle - custom style for the icon element
+ * @param {String} messageStyle - custom style for the message element
  *
  * @returns { JSX } - HTMLElement
  */
-
-export default function Modal({
+console.log("coucou");
+export function Modal({
   icon,
   message,
   buttonText,
   ariaLabel,
   closeModal,
+  buttonStyle,
+  iconStyle,
+  messageStyle,
 }) {
   // put focus on the close button
   const buttonRef = useRef(null);
@@ -70,8 +76,14 @@ export default function Modal({
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-title">
-              <div className="modal-icon">{icon}</div>
-              <h3 className="modal-message" id="dialog_label">
+              <div className="modal-icon" style={iconStyle}>
+                {icon}
+              </div>
+              <h3
+                className="modal-message"
+                id="dialog_label"
+                style={messageStyle}
+              >
                 {message}
               </h3>
             </div>
@@ -82,6 +94,7 @@ export default function Modal({
               ref={buttonRef}
               aria-label={ariaLabel}
               onClick={closeModal}
+              style={buttonStyle}
             >
               {buttonText}
             </button>
@@ -98,78 +111,7 @@ Modal.propTypes = {
   buttonText: PropTypes.string,
   ariaLabel: PropTypes.string,
   closeModal: PropTypes.func,
+  buttonStyle: PropTypes.string,
+  messageStyle: PropTypes.string,
+  iconStyle: PropTypes.string,
 };
-
-// with focus
-
-// import { useState, useRef } from "react";
-// import { Modal } from "modal-component-lib";
-
-// export default function MyComponent() {
-
-//   // Define state here
-//   const [showModal, setShowModal] = useState(false);
-
-//   // Example of values you can provide for the props
-//   const myIcon = "";
-//   const myMessage = "Employee created";
-//   const myButtonText = "OK";
-//   const myAriaLabel = "OK, fermer la fenêtre";
-
-//   // To put the focus on a specific tag when modal is closed
-//   const inputRef = useRef(null);
-
-//   function closeModal() {
-//     setShowModal(false);
-//     inputRef.current.focus();
-//   }
-
-//   return (
-//     <form>
-//       <input forwardedRef={inputRef} />
-//       <button type="submit">Save</button>
-
-// {/* The modal is conditionally rendered */}
-//       {showModal && (
-//         <Modal
-//           icon={myIcon}
-//           message={myMessage}
-//           buttonText={myButtonText}
-//           ariaLabel={myAriaLabel}
-//           closeModal={closeModal}
-//         />
-//       )}
-//     </form>
-//   );
-// }
-
-/// without focus
-
-// import { useState } from "react";
-// import { Modal } from "modal-component-lib";
-
-// export default function MyComponent() {
-
-//   const [showModal, setShowModal] = useState(false);
-
-//   const myIcon = "";
-//   const myMessage = "Employee created";
-//   const myButtonText = "OK";
-//   const myAriaLabel = "OK, fermer la fenêtre";
-
-//   return (
-//     <form>
-//       <button type="submit">Save</button>
-
-//       {showModal && (
-//         <Modal
-//           icon={myIcon}
-//           message={myMessage}
-//           buttonText={myButtonText}
-//           ariaLabel={myAriaLabel}
-//           closeModal={() => setShowModal(false)}
-//         />
-//       )}
-//     </form>
-//   );
-// }
