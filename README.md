@@ -61,7 +61,7 @@ Once you have set up your React app :
 <code>const inputRef = useRef(null);</code>
  </br>
    </br>
- <code>&ltinput forwardedRef={inputRef} /></code>
+ <code>&ltinput ref={inputRef} /></code>
  </br>
    </br>
   <li>Replace the closeModal variable we have set up above by this one</li>
