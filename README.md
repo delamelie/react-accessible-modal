@@ -26,10 +26,10 @@ Once you have set up your React app :
  </br>
  <li>Set the state :</li>
 <code>const [showModal, setShowModal] = useState(false);</code>
+</br>
  </br>
-</br>
 <li>Return the component in your JSX:</li>
-</br>
+<code>Modal icon={myIcon} message={myMessage} buttonText={myButtonText} ariaLabel={myAriaLabel} closeModal={closeModal}/></code>
 
 You can choose to use the version which allows you to put the focus on a specific tag when you close the modal or use a more basic version.</ol>
 
