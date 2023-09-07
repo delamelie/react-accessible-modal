@@ -9,7 +9,7 @@ A React responsive modal component that handles accessibility requirements :
 -	hides background content
 -	focus on whatever field you want when the modal is closed (optional)
 
-You can also choose to apply your own custom style for the button and the icon 
+You can also choose to apply your own custom style for the button, the icon and message
 </br>
 </br>
 <h2>Install</h2>
@@ -34,14 +34,20 @@ Once you have set up your React app :
  <code>const myButtonStyle = {backgroundColor: "#0891b2",};</code>
 </br>
  </br>
-  <li>Pass the onClick event that opens the modal :</li>
+  <li>Pass the onClick or onSubmit event that opens the modal :</li>
  e.g. </br>
- <code>&ltbutton type="submit" onClick={() =>setShowModal(true)}></code>
+   <code>const openModal = (e) => {
+    e.preventDefault();
+    setShowModal(true);
+  };</code>
+ </br>
+ </br>
+ <code>&ltform onSubmit={openModal}></code>
 </br>
  </br>
 <li>Return the component in your JSX using conditional rendering :</li>
 <code>{showModal && (</br>
- &ltModal icon={myIcon} message={myMessage} buttonText={myButtonText} ariaLabel={myAriaLabel} closeModal={closeModal} buttonStyle={myButtonStyle} iconStyle={myIconStyle}</br>
+ &ltModal icon={myIcon} message={myMessage} buttonText={myButtonText} ariaLabel={myAriaLabel} closeModal={closeModal} buttonStyle={myButtonStyle} iconStyle={myIconStyle} messageStyle={myMessageStyle}</br>
  />)}</code></ol>
 </br>
  </br>
@@ -111,6 +117,11 @@ Once you have set up your React app :
       <td><code>iconStyle</code></td>
       <td>string</td>
      <td>change the icon styling by passing the properties directly to the prop</td>
+    </tr>
+   <tr>
+      <td><code>messageStyle</code></td>
+      <td>string</td>
+     <td>change the mesage styling by passing the properties directly to the prop</td>
     </tr>
   </tbody>
 </table>
