@@ -1,14 +1,16 @@
 {
-  "name": "react-accessible-modal",
-  "description": "React accessible modal",
+  "name": "simple-react-accessible-modal",
+  "description": "A React responsive modal designed for accessibility",
   "author": "Amelie DL",
   "keywords": [
     "react",
     "components",
-    "modal"
+    "modal",
+    "responsive",
+    "accessibility",
+    "focus trap"
   ],
   "version": "0.1.0",
-  "private": false,
   "main": "dist/index.js",
   "files": [
     "dist",

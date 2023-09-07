@@ -1,28 +1,30 @@
-<h1>React plugin : react-accessible-modal</h1>
+<h1>React plugin : simple-react-accessible-modal</h1>
 </br>
 
 <img src="./modal-screenshot.PNG"/>
 
 A React responsive modal component that handles accessibility requirements :
--	use of Escape key to close the modal
--	traps focus inside the modal
--	hides background content
--	focus on whatever field you want when the modal is closed (optional)
 
-You can also choose to apply your own custom style for the button, the icon and message
+- use of Escape key to close the modal
+- traps focus inside the modal
+- hides background content
+- focus on whatever field you want when the modal is closed (optional)
+
+\*\*You can also choose to apply your own custom style for the button, the icon and message
 </br>
 </br>
+
 <h2>Install</h2>
 Once you have set up your React app :
 </br>
 </br>
-<code>npm install react-accessible-modal</code>
+<code>npm install simple-react-accessible-modal</code>
 </br>
 </br>
 <h2>Use</h2>
 <ol>
 <li>Import the component in your React app :</li>
-<code>import { Modal } from "react-accessible-modal";</code>
+<code>import { Modal } from "simple-react-accessible-modal";</code>
  </br>
  </br>
  <li>Set the state and variables :</li>
@@ -140,5 +142,3 @@ Here are 2 examples of how to use the plugin to give feedback to the user after 
 </br>
 <img src="./no-focus-screenshot.PNG"/>
 </br>
-
-
