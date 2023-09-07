@@ -42,13 +42,13 @@ Once you have set up your React app :
 <li>Return the component in your JSX using conditional rendering :</li>
 <code>{showModal && (</br>
  &ltModal icon={myIcon} message={myMessage} buttonText={myButtonText} ariaLabel={myAriaLabel} closeModal={closeModal} buttonStyle={myButtonStyle} iconStyle={myIconStyle}</br>
- />)}</code>
+ />)}</code></ol>
 </br>
  </br>
- <li>Set focus on a specific element when the modal is closed (optional) :</li>
+ Optional feature : set focus on a specific element when the modal is closed :
  </br>
- <ul>
- <li>Set the useRef hook to target the element that will receive the focus (we have chosen an input tag for this example but it can be another element)</li>
+  </br>
+ <ul><li>Set the useRef hook to target the element that will receive the focus (we have chosen an input tag for this example but it can be another element)</li>
  </br>
  <code>import { useRef } from "react";</code>
   </br>
