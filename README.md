@@ -10,7 +10,7 @@ A React responsive modal component that handles accessibility requirements :
 - hides background content
 - focus on whatever field you want when the modal is closed (optional)
 
-\*\*You can also choose to apply your own custom style for the button, the icon and message
+You can also choose to apply your own custom style for the button, the icon and message
 </br>
 </br>
 
