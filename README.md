@@ -7,9 +7,11 @@ A React responsive modal component that handles accessibility requirements :
 -	use of Escape key to close the modal
 -	traps focus inside the modal
 -	hides background content
--	focus on whatever field you want when the mdal is closed (optional)
-</br>
+-	focus on whatever field you want when the modal is closed (optional)
 
+You can also choose to apply your own custom style for the button and the icon 
+</br>
+</br>
 <h2>Install</h2>
 Once you have set up your React app :
 </br>
@@ -17,39 +19,55 @@ Once you have set up your React app :
 <code>npm install react-accessible-modal</code>
 </br>
 </br>
-
 <h2>Use</h2>
 <ol>
 <li>Import the component in your React app :</li>
 <code>import { Modal } from "react-accessible-modal";</code>
  </br>
  </br>
- <li>Set the state :</li>
-<code>const [showModal, setShowModal] = useState(false);</code>
+ <li>Set the state and variables :</li>
+ e.g. </br>
+ <code>import { useState } from "react";</code></br>
+ <code>const [showModal, setShowModal] = useState(false);</code></br>
+ <code>const myMessage = "Profile created successfully";</code></br>
+ <code>const closeModal = () => setShowModal(false);</code></br>
+ <code>const myButtonStyle = {backgroundColor: "#0891b2",};</code>
 </br>
  </br>
-<li>Return the component in your JSX:</li>
-<code>Modal icon={myIcon} message={myMessage} buttonText={myButtonText} ariaLabel={myAriaLabel} closeModal={closeModal}/></code>
-
-You can choose to use the version which allows you to put the focus on a specific tag when you close the modal or use a more basic version.</ol>
-
-Here are 2 examples of how to use the plugin to give feedback to the user after a form submission. 
+  <li>Pass the onClick event that opens the modal :</li>
+ e.g. </br>
+ <code>&ltbutton type="submit" onClick={() =>setShowModal(true)}></code>
 </br>
+ </br>
+<li>Return the component in your JSX using conditional rendering :</li>
+<code>{showModal && (</br>
+ &ltModal icon={myIcon} message={myMessage} buttonText={myButtonText} ariaLabel={myAriaLabel} closeModal={closeModal} buttonStyle={myButtonStyle} iconStyle={myIconStyle}</br>
+ />)}</code>
 </br>
--	With focus : when the user gets back to the page, the focus is placed on a specific element (input)
+ </br>
+ <li>Set focus on a specific element when the modal is closed (optional) :</li>
+ </br>
+ <ul>
+ <li>Set the useRef hook to target the element that will receive the focus (we have chosen an input tag for this example but it can be another element)</li>
+ </br>
+ <code>import { useRef } from "react";</code>
+  </br>
+<code>const inputRef = useRef(null);</code>
+ </br>
+   </br>
+ <code>&ltinput forwardedRef={inputRef} /></code>
+ </br>
+   </br>
+  <li>Replace the closeModal variable we have set up above by this one</li>
+  </br>
+ <code>const closeModal = () => {
+    setShowModal(false);
+    inputRef.current.focus();
+  };</code></ul>
 </br>
-<img src="./focus-screenshot.PNG"/>
-</br>
--	Without focus
-</br>
-</br>
-<img src="./no-focus-screenshot.PNG"/>
-</br>
-
 <h2>Props</h2>
 </br>
-<img src="./props-screenshot.PNG"/>
-
+ ** required props
 <table>
   <thead>
     <tr>
@@ -65,12 +83,12 @@ Here are 2 examples of how to use the plugin to give feedback to the user after 
      <td>icon</td>
     </tr>
    <tr>
-      <td><code>message</code></td>
+      <td><code>message</code>**</td>
       <td>string</td>
      <td>message confirming that the action was successfully performed</td>
     </tr>
    <tr>
-      <td><code>buttonText</code></td>
+      <td><code>buttonText</code>**</td>
       <td>string</td>
      <td>text displayed inside the button</td>
     </tr>
@@ -80,11 +98,35 @@ Here are 2 examples of how to use the plugin to give feedback to the user after 
      <td>label aiming to help users of assistive technologies, especially if buttonText value is not quite explicit</td>
     </tr>
    <tr>
-      <td><code>closeModal</code></td>
+      <td><code>closeModal</code>**</td>
       <td>function</td>
      <td>fired when the user clicks on the button</td>
     </tr>
+   <tr>
+      <td><code>buttonStyle</code></td>
+      <td>string</td>
+     <td>change the button styling by passing the properties directly to the prop</td>
+    </tr>
+   <tr>
+      <td><code>iconStyle</code></td>
+      <td>string</td>
+     <td>change the icon styling by passing the properties directly to the prop</td>
+    </tr>
   </tbody>
 </table>
+
+<h2>Examples</h2>
+Here are 2 examples of how to use the plugin to give feedback to the user after a form submission. 
+</br>
+</br>
+-	With focus : when the user gets back to the page, the focus is placed on a specific element (input)
+</br>
+<img src="./focus-screenshot.PNG"/>
+</br>
+-	Without focus
+</br>
+</br>
+<img src="./no-focus-screenshot.PNG"/>
+</br>
 
 
