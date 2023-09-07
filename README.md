@@ -130,7 +130,8 @@ Once you have set up your React app :
 Here are 2 examples of how to use the plugin to give feedback to the user after a form submission. 
 </br>
 </br>
--	With focus : when the user gets back to the page, the focus is placed on a specific element (input)
+-	With focus : when the user gets back to the page, the focus is placed on a specific element
+</br>
 </br>
 <img src="./focus-screenshot.PNG"/>
 </br>
