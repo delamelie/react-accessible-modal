@@ -9,5 +9,5 @@ Object.defineProperty(exports, "Modal", {
     return _Modal.default;
   }
 });
-var _Modal = _interopRequireDefault(require("./lib/Modal"));
+var _Modal = _interopRequireDefault(require("./Modal"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

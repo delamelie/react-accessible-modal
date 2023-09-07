@@ -22,7 +22,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  *
  * @returns { JSX } - HTMLElement
  */
-console.log("coucou");
+
 function Modal(_ref) {
   let {
     icon,

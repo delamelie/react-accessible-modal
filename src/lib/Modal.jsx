@@ -16,7 +16,7 @@ import "./modal.css";
  *
  * @returns { JSX } - HTMLElement
  */
-console.log("coucou");
+
 export function Modal({
   icon,
   message,

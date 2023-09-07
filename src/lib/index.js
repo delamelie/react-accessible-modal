@@ -1,3 +1,3 @@
-import Modal from "./lib/Modal";
+import Modal from "./Modal";
 
 export { Modal };
