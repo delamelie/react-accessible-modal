@@ -1,4 +1,4 @@
-<h1>React plugin : simple-react-accessible-modal</h1>
+<h1>React plugin : react-simple-accessible-modal</h1>
 </br>
 
 <img src="./modal-screenshot.PNG"/>
@@ -18,13 +18,13 @@ You can also choose to apply your own custom style for the button, the icon and 
 Once you have set up your React app :
 </br>
 </br>
-<code>npm install simple-react-accessible-modal</code>
+<code>npm install react-simple-accessible-modal</code>
 </br>
 </br>
 <h2>Use</h2>
 <ol>
 <li>Import the component in your React app :</li>
-<code>import { Modal } from "simple-react-accessible-modal";</code>
+<code>import { Modal } from "react-simple-accessible-modal";</code>
  </br>
  </br>
  <li>Set the state and variables :</li>
