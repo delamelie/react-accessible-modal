@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./modal.css";
 
@@ -17,7 +17,7 @@ import "./modal.css";
  * @returns { JSX } - HTMLElement
  */
 
-export function Modal({
+function Modal({
   icon,
   message,
   buttonText,
@@ -104,6 +104,8 @@ export function Modal({
     </div>
   );
 }
+
+export default Modal;
 
 Modal.propTypes = {
   icon: PropTypes.string,

@@ -1,4 +1,4 @@
-# React plugin : react-accessible-modal
+# React plugin : react-custom-accessible-modal
 
 <img src="./modal-screenshot.PNG"/>
 
@@ -8,7 +8,8 @@ A React responsive modal component that handles accessibility requirements :
 - traps focus inside the modal
 - hides background content
 - focus on whatever field you want when the modal is closed (optional)
-  You can also choose to apply your own custom style for the button, the icon and message
+
+You can also choose to apply your own custom style for the button, the icon and message
 
 ## Features
 
@@ -19,14 +20,14 @@ Node.js > v.16.17.1
 
 Once you have set up your React app :
 
-`npm install react-accessible-modal`
+`npm install react-custom-accessible-modal`
 
 ## Use
 
 - **Import the plugin in your React app :**
 
 ```bash
-  import { Modal } from "react-accessible-modal";
+  import { Modal } from "react-custom-accessible-modal";
 ```
 
 - **Set the state and variables in the component where the plugin is imported (e.g.):**
