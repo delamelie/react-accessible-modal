@@ -1,9 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./modal.css";
 
 /**
- * A React responsive modal component that handles accessibility requirements (use of escape key to close the modal, traps focus inside the modal, hides background content, ffocus on whatever field the user wants when the modal is closed)
+ * A React responsive modal component that handles accessibility requirements (use of escape key to close the modal, traps focus inside the modal, hides background content, focus on whatever field the user wants when the modal is closed)
  * @module Modal
  * @param {String} icon - to render more explicit message
  * @param {String} message - message displayed to users
@@ -17,7 +17,7 @@ import "./modal.css";
  * @returns { JSX } - HTMLElement
  */
 
-function Modal({
+const Modal = ({
   icon,
   message,
   buttonText,
@@ -26,7 +26,7 @@ function Modal({
   buttonStyle,
   iconStyle,
   messageStyle,
-}) {
+}) => {
   // put focus on the close button
   const buttonRef = useRef(null);
 
@@ -103,7 +103,7 @@ function Modal({
       </div>
     </div>
   );
-}
+};
 
 export default Modal;
 
