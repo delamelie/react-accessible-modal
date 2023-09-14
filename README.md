@@ -89,16 +89,16 @@ Set focus on a specific element when the modal is closed :
 
 ## Props
 
-| Parameter      | Type     | Description                                                                                                |
-| :------------- | :------- | :--------------------------------------------------------------------------------------------------------- |
-| `icon`         | `object` | icon                                                                                                       |
-| `message`      | `string` | message confirming that the action was successfully performed                                              |
-| `buttonText`   | `string` | text displayed inside the button                                                                           |
-| `ariaLabel`    | `string` | label aiming to help users of assistive technologies, especially if buttonText value is not quite explicit |
-| `closeModal`   | `string` | fired when the user clicks on the button                                                                   |
-| `buttonStyle`  | `string` | change the button styling by passing the properties directly to the prop                                   |
-| `iconStyle`    | `string` | change the icon styling by passing the properties directly to the prop                                     |
-| `messageStyle` | `string` | change the message styling by passing the properties directly to the prop                                  |
+| Parameter      | Type       | Description                                                                                                |
+| :------------- | :--------- | :--------------------------------------------------------------------------------------------------------- |
+| `icon`         | `object`   | icon as to be imported as SVG                                                                              |
+| `message`      | `string`   | message confirming that the action was successfully performed                                              |
+| `buttonText`   | `string`   | text displayed inside the button                                                                           |
+| `ariaLabel`    | `string`   | label aiming to help users of assistive technologies, especially if buttonText value is not quite explicit |
+| `closeModal`   | `function` | fired when the user clicks on the button                                                                   |
+| `buttonStyle`  | `string`   | change the button styling by passing the properties directly to the prop                                   |
+| `iconStyle`    | `string`   | change the icon styling by passing the properties directly to the prop                                     |
+| `messageStyle` | `string`   | change the message styling by passing the properties directly to the prop                                  |
 
 ## Demo
 
@@ -113,7 +113,7 @@ import { Modal } from "react-custom-accessible-modal";
 export default function MyComponent() {
   //  Define state and variables
   const [showModal, setShowModal] = useState(false);
-  const myIcon = "iconName";
+  const myIcon = {icon};
   const myMessage = "Profile created successfully !";
   const myButtonText = "OK";
   const myAriaLabel = "OK, close modal";
@@ -166,7 +166,7 @@ export default function MyComponent() {
   // Define state and variables
   const [showModal, setShowModal] = useState(false);
 
-  const myIcon = "iconName";
+  const myIcon = {icon};
   const myMessage = "Profile created successfully !";
   const myButtonText = "OK";
   const myAriaLabel = "OK, close modal";

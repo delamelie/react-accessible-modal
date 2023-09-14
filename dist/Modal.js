@@ -11,7 +11,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * A React responsive modal component that handles accessibility requirements (use of escape key to close the modal, traps focus inside the modal, hides background content, focus on whatever field the user wants when the modal is closed)
  * @module Modal
- * @param {String} icon - to render more explicit message
+ * @param {Object} icon - to render more explicit message
  * @param {String} message - message displayed to users
  * @param {String} buttonText - to help users of assistive technologies with the use of the button
  * @param {String} ariaLabel - text on the button
