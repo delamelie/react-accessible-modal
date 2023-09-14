@@ -77,7 +77,7 @@ const Modal = ({
           <div className="modal-content">
             <div className="modal-title">
               <div className="modal-icon" style={iconStyle}>
-                <i className={icon}></i>
+                {icon}
               </div>
               <h3
                 className="modal-message"
@@ -108,7 +108,7 @@ const Modal = ({
 export default Modal;
 
 Modal.propTypes = {
-  icon: PropTypes.string,
+  icon: PropTypes.object,
   message: PropTypes.string,
   buttonText: PropTypes.string,
   ariaLabel: PropTypes.string,

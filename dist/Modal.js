@@ -88,9 +88,7 @@ const Modal = _ref => {
   }, /*#__PURE__*/React.createElement("div", {
     className: "modal-icon",
     style: iconStyle
-  }, /*#__PURE__*/React.createElement("i", {
-    className: icon
-  })), /*#__PURE__*/React.createElement("h3", {
+  }, icon), /*#__PURE__*/React.createElement("h3", {
     className: "modal-message",
     id: "dialog_label",
     style: messageStyle
@@ -106,7 +104,7 @@ const Modal = _ref => {
 var _default = Modal;
 exports.default = _default;
 Modal.propTypes = {
-  icon: _propTypes.default.string,
+  icon: _propTypes.default.object,
   message: _propTypes.default.string,
   buttonText: _propTypes.default.string,
   ariaLabel: _propTypes.default.string,

@@ -91,7 +91,7 @@ Set focus on a specific element when the modal is closed :
 
 | Parameter      | Type     | Description                                                                                                |
 | :------------- | :------- | :--------------------------------------------------------------------------------------------------------- |
-| `icon`         | `string` | icon                                                                                                       |
+| `icon`         | `object` | icon                                                                                                       |
 | `message`      | `string` | message confirming that the action was successfully performed                                              |
 | `buttonText`   | `string` | text displayed inside the button                                                                           |
 | `ariaLabel`    | `string` | label aiming to help users of assistive technologies, especially if buttonText value is not quite explicit |
