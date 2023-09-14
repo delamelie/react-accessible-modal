@@ -5,14 +5,14 @@ import "./modal.css";
 /**
  * A React responsive modal component that handles accessibility requirements (use of escape key to close the modal, traps focus inside the modal, hides background content, focus on whatever field the user wants when the modal is closed)
  * @module Modal
- * @param {Object} icon - to render more explicit message
+ * @param {Object} icon
  * @param {String} message - message displayed to users
- * @param {String} buttonText - to help users of assistive technologies with the use of the button
- * @param {String} ariaLabel - text on the button
- * @param {Function} closeModal - function to close the modal
- * @param {String} buttonStyle - custom style for the button element
- * @param {String} iconStyle - custom style for the icon element
- * @param {String} messageStyle - custom style for the message element
+ * @param {String} buttonText - text displayed inside the button
+ * @param {String} ariaLabel - to help users of assistive technologies with the use of the button
+ * @param {Function} closeModal - to close the modal
+ * @param {String} buttonStyle - custom style for button element
+ * @param {String} iconStyle - custom style for icon element
+ * @param {String} messageStyle - custom style for message element
  *
  * @returns { JSX } - HTMLElement
  */

@@ -37,11 +37,11 @@ Once you have set up your React app :
 
   const [showModal, setShowModal] = useState(false);
 
-  const myIcon = "iconName";
+  const myIcon = <svgPath>;
   const myMessage = "Profile created successfully !";
   const myButtonText = "OK";
   const myAriaLabel = "OK, close modal";
-  const closeModal = () => setShowModal(false);
+  const closeModal = {() => setShowModal(false)};
   const myButtonStyle = { backgroundColor: "#0891b2" };
   const myIconStyle = { borderRadius: "30px" };
   const myMessageStyle = { fontSize: "45px" };
@@ -91,7 +91,7 @@ Set focus on a specific element when the modal is closed :
 
 | Parameter      | Type       | Description                                                                                                |
 | :------------- | :--------- | :--------------------------------------------------------------------------------------------------------- |
-| `icon`         | `object`   | icon as to be imported as SVG                                                                              |
+| `icon`         | `object`   | icon must be in SVG format                                                                                 |
 | `message`      | `string`   | message confirming that the action was successfully performed                                              |
 | `buttonText`   | `string`   | text displayed inside the button                                                                           |
 | `ariaLabel`    | `string`   | label aiming to help users of assistive technologies, especially if buttonText value is not quite explicit |
@@ -107,13 +107,14 @@ Here are 2 examples of how to use the plugin to give feedback to the user after 
 - With focus : when the user gets back to the page, the focus is placed on a specific element
 
 ```bash
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Modal } from "react-custom-accessible-modal";
 
 export default function MyComponent() {
   //  Define state and variables
   const [showModal, setShowModal] = useState(false);
-  const myIcon = {icon};
+
+  const myIcon = <svgPath>;
   const myMessage = "Profile created successfully !";
   const myButtonText = "OK";
   const myAriaLabel = "OK, close modal";
@@ -159,18 +160,18 @@ export default function MyComponent() {
 - Without focus
 
 ```bash
-import { useState } from "react";
+import React, { useState } from "react";
 import { Modal } from "react-custom-accessible-modal";
 
 export default function MyComponent() {
   // Define state and variables
   const [showModal, setShowModal] = useState(false);
 
-  const myIcon = {icon};
+  const myIcon = <svgPath>;;
   const myMessage = "Profile created successfully !";
   const myButtonText = "OK";
   const myAriaLabel = "OK, close modal";
-  const closeModal = () => setShowModal(false);
+  const closeModal = {() => setShowModal(false)};
   const myButtonStyle = { backgroundColor: "#0891b2" };
   const myIconStyle = { borderRadius: "30px" };
   const myMessageStyle = { fontSize: "45px" };
