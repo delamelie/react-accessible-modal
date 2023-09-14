@@ -104,11 +104,11 @@ const Modal = _ref => {
 var _default = Modal;
 exports.default = _default;
 Modal.propTypes = {
-  icon: _propTypes.default.string,
-  message: _propTypes.default.string,
-  buttonText: _propTypes.default.string,
+  icon: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
+  message: _propTypes.default.string.isRequired,
+  buttonText: _propTypes.default.string.isRequired,
   ariaLabel: _propTypes.default.string,
-  closeModal: _propTypes.default.func,
+  closeModal: _propTypes.default.func.isRequired,
   buttonStyle: _propTypes.default.string,
   messageStyle: _propTypes.default.string,
   iconStyle: _propTypes.default.string

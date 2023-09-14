@@ -108,11 +108,11 @@ const Modal = ({
 export default Modal;
 
 Modal.propTypes = {
-  icon: PropTypes.string,
-  message: PropTypes.string,
-  buttonText: PropTypes.string,
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  message: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
   ariaLabel: PropTypes.string,
-  closeModal: PropTypes.func,
+  closeModal: PropTypes.func.isRequired,
   buttonStyle: PropTypes.string,
   messageStyle: PropTypes.string,
   iconStyle: PropTypes.string,
